@@ -17,17 +17,63 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
-Explain your design in plain language.
+Real-world recommendation systems combine many signals, then rank items by predicted satisfaction. My simulation uses a transparent, rule-based version of that idea: read user preferences, score every song in the CSV with weighted feature matches, sort by score, and return the top K songs.
 
-Some prompts to answer:
+### Plan and data flow
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+1. Input: User preferences (`favorite_genre`, `favorite_mood`, `target_energy`, `likes_acoustic`).
+2. Process: Loop through every song and compute one total score.
+3. Output: Rank all songs by score (highest first) and return Top K.
 
-You can include a simple diagram or bullet list if helpful.
+### Finalized Algorithm Recipe
+
+Features used from `Song`:
+- `genre`
+- `mood`
+- `energy`
+- `acousticness`
+
+Features used from `UserProfile`:
+- `favorite_genre`
+- `favorite_mood`
+- `target_energy`
+- `likes_acoustic`
+
+Scoring rules for each song:
+- +2.0 points for a genre match.
+- +1.0 point for a mood match.
+- Energy similarity points based on closeness to target energy:
+   - `energy_similarity = 1 - abs(song_energy - target_energy)`
+   - `energy_points = 2.0 * energy_similarity`
+- Acoustic preference points:
+   - If `likes_acoustic` is true: `acoustic_points = 0.5 * song_acousticness`
+   - If `likes_acoustic` is false: `acoustic_points = 0.5 * (1 - song_acousticness)`
+- Total score:
+   - `score = genre_points + mood_points + energy_points + acoustic_points`
+
+Ranking rules:
+- Sort songs by total score in descending order.
+- Break ties by smaller energy distance to the target.
+- If still tied, sort by `id` for stable output.
+
+### Expected limitations and bias
+
+This system may over-prioritize genre because genre has the largest fixed weight. That can cause good cross-genre songs (especially strong mood or energy matches) to rank too low. It also represents taste as one static profile, so users with multiple listening contexts (for example, workout vs study) may get narrow or repetitive recommendations.
+
+### Terminal Output
+
+Recommendations (song titles, scores, and reasons):
+
+![Terminal output screenshot](Screenshot%202026-04-01%20at%207.18.27%E2%80%AFPM.png)
+
+Recommendations for each profile:
+
+![Terminal output screenshot 2](Screenshot%202026-04-01%20at%207.35.19%E2%80%AFPM.png)
+
+![Terminal output screenshot 3](Screenshot%202026-04-01%20at%207.36.02%E2%80%AFPM.png)
+
+![Terminal output screenshot 4](Screenshot%202026-04-01%20at%207.36.31%E2%80%AFPM.png)
+
 
 ---
 
