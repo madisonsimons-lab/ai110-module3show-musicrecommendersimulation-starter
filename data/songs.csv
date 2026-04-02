@@ -1,21 +1,21 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
-11,Neon Cypher,Atlas Verse,hip hop,confident,0.84,96,0.68,0.79,0.12
-12,Moonlit Sonata,Aria North,classical,reflective,0.22,68,0.44,0.20,0.97
-13,Dusty Highway,Red Cedar,country,nostalgic,0.51,104,0.72,0.61,0.58
-14,Island Signal,Blue Current,reggae,uplifting,0.63,88,0.76,0.74,0.47
-15,Iron Anthem,Black Forge,metal,rebellious,0.95,170,0.39,0.52,0.03
-16,Sunset Barrio,Luna Brava,latin,playful,0.79,126,0.83,0.86,0.19
-17,Velvet Afterglow,Nova Silk,r&b,romantic,0.57,92,0.66,0.72,0.41
-18,Pine Trail Hymn,Hollow Pines,folk,earthy,0.34,76,0.62,0.48,0.88
-19,Midday Mirage,Solar Cartel,afrobeats,joyful,0.81,112,0.85,0.87,0.16
-20,Circuit Bloom,Phase Harbor,drum and bass,driven,0.92,174,0.58,0.83,0.07
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness,popularity,release_year,release_decade,detailed_mood_tags,instrumentalness,speechiness,live_energy
+1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18,87,2019,2010,uplifting;bright;anthemic,0.12,0.06,0.22
+2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71,69,2021,2020,study;soft;warm,0.74,0.04,0.09
+3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10,81,2012,2010,aggressive;driving;anthemic,0.08,0.05,0.34
+4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86,62,2020,2020,study;calm;ambient,0.82,0.03,0.07
+5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05,90,2018,2010,hype;energetic;anthemic,0.06,0.07,0.28
+6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92,55,2016,2010,dreamy;floating;calm,0.91,0.02,0.08
+7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89,58,2008,2000,warm;cozy;late-night,0.78,0.03,0.15
+8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22,74,2017,2010,neon;nostalgic;cinematic,0.32,0.05,0.19
+9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78,65,2022,2020,study;minimal;focused,0.80,0.03,0.08
+10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35,72,2015,2010,bright;roadtrip;sunset,0.22,0.06,0.21
+11,Neon Cypher,Atlas Verse,hip hop,confident,0.84,96,0.68,0.79,0.12,79,2014,2010,bold;swagger;night,0.04,0.28,0.17
+12,Moonlit Sonata,Aria North,classical,reflective,0.22,68,0.44,0.20,0.97,52,1998,1990,melancholic;cinematic;quiet,0.98,0.01,0.06
+13,Dusty Highway,Red Cedar,country,nostalgic,0.51,104,0.72,0.61,0.58,61,2005,2000,nostalgic;roadtrip;warm,0.30,0.07,0.25
+14,Island Signal,Blue Current,reggae,uplifting,0.63,88,0.76,0.74,0.47,66,2011,2010,sunny;easygoing;uplifting,0.24,0.09,0.23
+15,Iron Anthem,Black Forge,metal,rebellious,0.95,170,0.39,0.52,0.03,77,2003,2000,aggressive;dark;driving,0.03,0.04,0.31
+16,Sunset Barrio,Luna Brava,latin,playful,0.79,126,0.83,0.86,0.19,83,2019,2010,fiesta;playful;bright,0.10,0.08,0.24
+17,Velvet Afterglow,Nova Silk,r&b,romantic,0.57,92,0.66,0.72,0.41,70,2013,2010,sensual;late-night;smooth,0.18,0.14,0.18
+18,Pine Trail Hymn,Hollow Pines,folk,earthy,0.34,76,0.62,0.48,0.88,57,1996,1990,acoustic;earthy;intimate,0.86,0.03,0.14
+19,Midday Mirage,Solar Cartel,afrobeats,joyful,0.81,112,0.85,0.87,0.16,84,2021,2020,euphoric;dance;sunny,0.07,0.10,0.20
+20,Circuit Bloom,Phase Harbor,drum and bass,driven,0.92,174,0.58,0.83,0.07,76,2010,2010,adrenaline;driving;night,0.05,0.09,0.27
